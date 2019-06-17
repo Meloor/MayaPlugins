@@ -1,0 +1,1070 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>human_bone_bind_window</class>
+ <widget class="QMainWindow" name="human_bone_bind_window">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>332</width>
+    <height>676</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>320</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>3200</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>12</pointsize>
+   </font>
+  </property>
+  <property name="acceptDrops">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Human Bone Bind</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QToolBox" name="body_tbx">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="page_2">
+       <attribute name="label">
+        <string>头部</string>
+       </attribute>
+       <widget class="QPushButton" name="create_head_btn">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>30</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>创建</string>
+        </property>
+        <property name="+command" stdset="0">
+         <string>HumanBodyBindWindow.use.createHeadBtnCmd</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_19">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>0</y>
+          <width>141</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>一键创建头部：</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="waist">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>310</width>
+         <height>421</height>
+        </rect>
+       </property>
+       <attribute name="label">
+        <string>腰部</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QToolBox" name="waist_tbx">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string notr="true"/>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="page">
+           <attribute name="label">
+            <string>创建</string>
+           </attribute>
+           <widget class="QPushButton" name="create_waist_btn">
+            <property name="geometry">
+             <rect>
+              <x>150</x>
+              <y>30</y>
+              <width>93</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>创建</string>
+            </property>
+            <property name="+command" stdset="0">
+             <string>HumanBodyBindWindow.use.createWaistBtnCmd</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_10">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>10</y>
+              <width>111</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>一键创建腰部：</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="w_bone">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>288</width>
+             <height>381</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <attribute name="label">
+            <string>骨骼</string>
+           </attribute>
+           <widget class="QPushButton" name="create_bone_btn">
+            <property name="geometry">
+             <rect>
+              <x>150</x>
+              <y>110</y>
+              <width>93</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>创建</string>
+            </property>
+            <property name="+command" stdset="0">
+             <string>HumanBodyBindWindow.use.createBoneBtnCmd</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="adjust_axis_btn">
+            <property name="geometry">
+             <rect>
+              <x>150</x>
+              <y>310</y>
+              <width>93</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>调整</string>
+            </property>
+            <property name="+command" stdset="0">
+             <string>HumanBodyBindWindow.use.adjustAxisBtnCmd</string>
+            </property>
+           </widget>
+           <widget class="Line" name="line">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>140</y>
+              <width>320</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_8">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>80</y>
+              <width>81</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>创建骨骼：</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_9">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>290</y>
+              <width>72</width>
+              <height>15</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>调整轴向：</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="help_btn">
+            <property name="geometry">
+             <rect>
+              <x>250</x>
+              <y>110</y>
+              <width>21</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>？</string>
+            </property>
+            <property name="+command" stdset="0">
+             <string>HumanBodyBindWindow.use.helpBtnCmd</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="help_btn_2">
+            <property name="geometry">
+             <rect>
+              <x>250</x>
+              <y>310</y>
+              <width>21</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>？</string>
+            </property>
+            <property name="+command" stdset="0">
+             <string>HumanBodyBindWindow.use.helpBtnCmd</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="help_btn_11">
+            <property name="geometry">
+             <rect>
+              <x>250</x>
+              <y>30</y>
+              <width>21</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>？</string>
+            </property>
+            <property name="+command" stdset="0">
+             <string>HumanBodyBindWindow.use.helpBtnCmd</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="create_bone_curve_btn">
+            <property name="geometry">
+             <rect>
+              <x>150</x>
+              <y>30</y>
+              <width>93</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>创建</string>
+            </property>
+            <property name="+command" stdset="0">
+             <string>HumanBodyBindWindow.use.createBoneCurveBtnCmd</string>
+            </property>
+           </widget>
+           <widget class="Line" name="line_4">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>67</y>
+              <width>320</width>
+              <height>3</height>
+             </rect>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_15">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>7</y>
+              <width>261</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>创建曲线：创建后请调整曲线位置</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_16">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>36</y>
+              <width>72</width>
+              <height>15</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>点数：</string>
+            </property>
+           </widget>
+           <widget class="QSpinBox" name="jnt_num_2">
+            <property name="geometry">
+             <rect>
+              <x>90</x>
+              <y>33</y>
+              <width>50</width>
+              <height>22</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_17">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>170</y>
+              <width>131</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>连接头部：(可选)</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="connect_head_btn">
+            <property name="geometry">
+             <rect>
+              <x>150</x>
+              <y>220</y>
+              <width>93</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>连接</string>
+            </property>
+            <property name="+command" stdset="0">
+             <string>HumanBodyBindWindow.use.connectHeadBtnCmd</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="help_btn_12">
+            <property name="geometry">
+             <rect>
+              <x>250</x>
+              <y>220</y>
+              <width>21</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>？</string>
+            </property>
+            <property name="+command" stdset="0">
+             <string>HumanBodyBindWindow.use.helpBtnCmd</string>
+            </property>
+           </widget>
+           <widget class="Line" name="line_7">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>260</y>
+              <width>320</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="lineEdit">
+            <property name="geometry">
+             <rect>
+              <x>12</x>
+              <y>224</y>
+              <width>120</width>
+              <height>20</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_18">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>200</y>
+              <width>251</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>头部根骨骼名称：(非本插件创建)</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="w_ik">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>288</width>
+             <height>381</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <attribute name="label">
+            <string>IK</string>
+           </attribute>
+           <widget class="QPushButton" name="create_ik_btn">
+            <property name="geometry">
+             <rect>
+              <x>150</x>
+              <y>20</y>
+              <width>93</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>创建</string>
+            </property>
+            <property name="+command" stdset="0">
+             <string>HumanBodyBindWindow.use.createIKBtnCmd</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="rebuild_spine_btn">
+            <property name="geometry">
+             <rect>
+              <x>150</x>
+              <y>90</y>
+              <width>93</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>重建</string>
+            </property>
+            <property name="+command" stdset="0">
+             <string>HumanBodyBindWindow.use.rebuildSplineBtnCmd</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_6">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>0</y>
+              <width>72</width>
+              <height>15</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>创建IK:</string>
+            </property>
+           </widget>
+           <widget class="Line" name="line_3">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>50</y>
+              <width>320</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_7">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>70</y>
+              <width>72</width>
+              <height>15</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>重建曲线：</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="help_btn_3">
+            <property name="geometry">
+             <rect>
+              <x>250</x>
+              <y>20</y>
+              <width>21</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>？</string>
+            </property>
+            <property name="+command" stdset="0">
+             <string>HumanBodyBindWindow.use.helpBtnCmd</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="help_btn_4">
+            <property name="geometry">
+             <rect>
+              <x>250</x>
+              <y>90</y>
+              <width>21</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>？</string>
+            </property>
+            <property name="+command" stdset="0">
+             <string>HumanBodyBindWindow.use.helpBtnCmd</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="w_ctrl">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>288</width>
+             <height>381</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>控制器</string>
+           </attribute>
+           <widget class="QPushButton" name="help_btn_5">
+            <property name="geometry">
+             <rect>
+              <x>250</x>
+              <y>30</y>
+              <width>21</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>？</string>
+            </property>
+            <property name="+command" stdset="0">
+             <string>HumanBodyBindWindow.use.helpBtnCmd</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="help_btn_6">
+            <property name="geometry">
+             <rect>
+              <x>250</x>
+              <y>110</y>
+              <width>21</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>?</string>
+            </property>
+            <property name="+command" stdset="0">
+             <string>HumanBodyBindWindow.use.helpBtnCmd</string>
+            </property>
+           </widget>
+           <widget class="QSpinBox" name="ctrl_jnt_num">
+            <property name="geometry">
+             <rect>
+              <x>80</x>
+              <y>33</y>
+              <width>50</width>
+              <height>22</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="Line" name="line_5">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>70</y>
+              <width>320</width>
+              <height>3</height>
+             </rect>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="adjust_ctrl_btn">
+            <property name="geometry">
+             <rect>
+              <x>150</x>
+              <y>110</y>
+              <width>93</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>调整</string>
+            </property>
+            <property name="+command" stdset="0">
+             <string>HumanBodyBindWindow.use.adjustCtrlBtnCmd</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_13">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>90</y>
+              <width>72</width>
+              <height>15</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>调整位置:</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_12">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>36</y>
+              <width>72</width>
+              <height>15</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>数量：</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="create_ctrl_btn">
+            <property name="geometry">
+             <rect>
+              <x>150</x>
+              <y>30</y>
+              <width>93</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>创建</string>
+            </property>
+            <property name="+command" stdset="0">
+             <string>HumanBodyBindWindow.use.createCtrlBtnCmd</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_11">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>10</y>
+              <width>71</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>创建：</string>
+            </property>
+           </widget>
+           <widget class="Line" name="line_6">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>150</y>
+              <width>320</width>
+              <height>3</height>
+             </rect>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="help_btn_10">
+            <property name="geometry">
+             <rect>
+              <x>250</x>
+              <y>190</y>
+              <width>21</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>?</string>
+            </property>
+            <property name="+command" stdset="0">
+             <string>HumanBodyBindWindow.use.helpBtnCmd</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_14">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>170</y>
+              <width>72</width>
+              <height>15</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>蒙皮：</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="ctrl_bind_skin_btn">
+            <property name="geometry">
+             <rect>
+              <x>150</x>
+              <y>190</y>
+              <width>93</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>调整</string>
+            </property>
+            <property name="+command" stdset="0">
+             <string>HumanBodyBindWindow.use.ctrlBindSkinBtnCmd</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="w_rotate">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>288</width>
+             <height>381</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>旋转</string>
+           </attribute>
+           <widget class="QPushButton" name="set_rot_btn">
+            <property name="geometry">
+             <rect>
+              <x>150</x>
+              <y>30</y>
+              <width>93</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>设置</string>
+            </property>
+            <property name="+command" stdset="0">
+             <string>HumanBodyBindWindow.use.setRotBtnCmd</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_5">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>10</y>
+              <width>72</width>
+              <height>15</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>设置旋转：</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="help_btn_7">
+            <property name="geometry">
+             <rect>
+              <x>250</x>
+              <y>30</y>
+              <width>21</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>？</string>
+            </property>
+            <property name="+command" stdset="0">
+             <string>HumanBodyBindWindow.use.helpBtnCmd</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="w_stretch">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>288</width>
+             <height>381</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>拉伸</string>
+           </attribute>
+           <widget class="QPushButton" name="get_spline_length_btn">
+            <property name="geometry">
+             <rect>
+              <x>150</x>
+              <y>30</y>
+              <width>93</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>获取</string>
+            </property>
+            <property name="+command" stdset="0">
+             <string>HumanBodyBindWindow.use.getSplineLengthBtnCmd</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="connect_joint_btn">
+            <property name="geometry">
+             <rect>
+              <x>150</x>
+              <y>90</y>
+              <width>93</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>连接</string>
+            </property>
+            <property name="+command" stdset="0">
+             <string>HumanBodyBindWindow.use.connectJointBtnCmd</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>11</y>
+              <width>151</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>获取线性IK长度:</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_2">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>80</y>
+              <width>68</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>属性连接:</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="spline_length">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>33</y>
+              <width>111</width>
+              <height>21</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="Line" name="line_2">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>60</y>
+              <width>320</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="help_btn_9">
+            <property name="geometry">
+             <rect>
+              <x>250</x>
+              <y>90</y>
+              <width>21</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>?</string>
+            </property>
+            <property name="+command" stdset="0">
+             <string>HumanBodyBindWindow.use.helpBtnCmd</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="help_btn_8">
+            <property name="geometry">
+             <rect>
+              <x>250</x>
+              <y>30</y>
+              <width>21</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>?</string>
+            </property>
+            <property name="+command" stdset="0">
+             <string>HumanBodyBindWindow.use.helpBtnCmd</string>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="legs">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>310</width>
+         <height>583</height>
+        </rect>
+       </property>
+       <attribute name="label">
+        <string>腿部</string>
+       </attribute>
+       <widget class="QLabel" name="label_3">
+        <property name="geometry">
+         <rect>
+          <x>11</x>
+          <y>11</y>
+          <width>111</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>等待实装...</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="arms">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>310</width>
+         <height>583</height>
+        </rect>
+       </property>
+       <attribute name="label">
+        <string>手臂</string>
+       </attribute>
+       <widget class="QLabel" name="label_4">
+        <property name="geometry">
+         <rect>
+          <x>11</x>
+          <y>11</y>
+          <width>101</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>等待实装...</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="others">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>310</width>
+         <height>583</height>
+        </rect>
+       </property>
+       <attribute name="label">
+        <string>其他</string>
+       </attribute>
+       <widget class="QPushButton" name="about_btn">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>20</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>关于</string>
+        </property>
+        <property name="+command" stdset="0">
+         <string>HumanBodyBindWindow.use.aboutBtnCmd</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="widget" native="true">
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>86</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="start_btn">
+         <property name="text">
+          <string>开始</string>
+         </property>
+         <property name="+command" stdset="0">
+          <string>HumanBodyBindWindow.use.startBtnCmd</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>77</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
